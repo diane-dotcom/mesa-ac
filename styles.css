@@ -101,16 +101,8 @@ svg { display: inline-block; height: 1em; width: 1em; fill: none; stroke: curren
   position: relative;
   z-index: 4;
 }
-.google-dot {
-  background: conic-gradient(from -45deg, #4285f4 0 25%, #34a853 0 45%, #fbbc05 0 68%, #ea4335 0 82%, #4285f4 0 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  display: inline-flex;
-  font-size: 22px;
-  font-weight: 900;
-  line-height: 1;
-}
+.google-dot { align-items: center; display: inline-flex; }
+.google-logo { height: 22px; width: 22px; }
 .stars { color: var(--gold); display: inline-flex; gap: 3px; vertical-align: middle; }
 .stars svg { fill: currentColor; height: 17px; stroke-width: 2.5; width: 17px; }
 
@@ -264,15 +256,27 @@ input:focus, textarea:focus { border-color: var(--red); box-shadow: 0 0 0 4px rg
 .form-message.is-visible { background: #ecfff4; color: #087a37; padding: 12px; }
 
 .section { padding: clamp(56px, 7vw, 90px) clamp(18px, 5vw, 72px); }
+.services {
+  background:
+    linear-gradient(180deg, #f5f6f7 0%, #f8f8f8 68%, #fff 100%);
+  padding-bottom: calc(clamp(56px, 7vw, 90px) + 10px);
+  overflow: hidden;
+  position: relative;
+}
+.services .section-heading,
+.services .service-grid,
+.services .services-cta { position: relative; z-index: 1; }
 .section-heading { margin: 0 auto 34px; max-width: 720px; text-align: center; }
 .section h2, .proof-band h2, .final-cta h2 { font-size: clamp(30px, 4vw, 46px); letter-spacing: -0.055em; line-height: 1.05; margin: 0 0 12px; }
 .section p { color: var(--muted); line-height: 1.65; }
 .service-grid { display: grid; gap: 20px; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0 auto; max-width: 1120px; }
-.service-card { border: 1px solid var(--line); border-radius: 12px; padding: 34px 24px; text-align: center; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
-.service-card:hover { border-color: rgba(237,16,27,.28); box-shadow: 0 18px 46px rgba(10,20,30,.08); transform: translateY(-5px); }
+.service-card { background: rgba(255,255,255,.82); border: 1px solid #dedede; border-radius: 14px; box-shadow: 0 2px 0 rgba(6,11,16,.08); padding: 34px 24px; text-align: center; transition: transform .2s ease, border-color .2s ease, background .2s ease; }
+.service-card:hover { background: #fff; border-color: rgba(237,16,27,.26); transform: translateY(-3px); }
 .service-card h3 { font-size: 20px; margin: 18px 0 8px; }
 .service-card a { align-items: center; color: var(--red); display: inline-flex; font-size: 13px; font-weight: 900; gap: 8px; margin-top: 10px; text-transform: uppercase; }
 .service-card a svg { height: 15px; width: 15px; }
+.services-cta { display: flex; justify-content: center; margin-top: 30px; }
+.services-cta .button { min-width: 230px; }
 
 .split { align-items: center; border-top: 1px solid var(--line); display: grid; gap: clamp(32px, 5vw, 86px); grid-template-columns: minmax(0, .95fr) minmax(320px, 1fr); }
 .value-grid { display: grid; gap: 24px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 34px; }
