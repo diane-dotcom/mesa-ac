@@ -28,8 +28,8 @@
 
       <nav class="main-nav" aria-label="Primary navigation">
         <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#faq">FAQs</a>
+        <a href="services.html">Services</a>
+        <a href="locations.html">Locations</a>
         <a href="#about">About Us</a>
       </nav>
 
@@ -71,7 +71,7 @@
             <span class="van-logo">MESA</span>
             <span class="van-service-text">Plumbing &middot; Sewer &middot; Drain</span>
             <span class="van-line"></span>
-            <span class="van-icons"><i data-lucide="droplet"></i><i data-lucide="sun"></i><i data-lucide="snowflake"></i></span>
+            <span class="van-icons"><i data-lucide="droplet"></i><i data-lucide="wrench"></i><i data-lucide="waves"></i></span>
             <span class="van-mascot"><span></span></span>
             <span class="van-wheel wheel-left"></span>
             <span class="van-wheel wheel-right"></span>
@@ -152,7 +152,7 @@
           </article>
         </div>
         <div class="services-cta">
-          <a class="button button-outline" href="#request">View All Services <i data-lucide="arrow-right"></i></a>
+          <a class="button button-outline" href="services.html">View All Services <i data-lucide="arrow-right"></i></a>
         </div>
       </section>
 
@@ -234,7 +234,7 @@
               <div><strong>David L.</strong><span class="verified"><i data-lucide="badge-check"></i></span><span class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></span></div>
               <span class="review-google">G</span>
             </div>
-            <p>Honest, reliable, and very professional. Mesa is our go-to home comfort team.</p>
+            <p>Honest, reliable, and very professional. Mesa is our go-to plumbing and sewer team.</p>
             <small>1 week ago</small>
           </a>
           <a class="review-card" href="https://www.google.com/search?q=Mesa+plumbing+and+sewer+company+Boulder+reviews" target="_blank" rel="noreferrer">
@@ -312,7 +312,7 @@
                 <label><i data-lucide="user"></i><input name="name" placeholder="Full Name" required /></label>
                 <label><i data-lucide="phone"></i><input name="phone" placeholder="Phone Number" required /></label>
                 <label class="wide"><i data-lucide="mail"></i><input name="email" type="email" placeholder="Email Address" /></label>
-                <label class="wide"><i data-lucide="wrench"></i><select name="service" required><option value="service">Service Needed</option><option value="Plumbing Repair">Plumbing Repair</option><option value="Sewer & Drain">Sewer &amp; Drain</option><option value="Water Heater">Water Heater</option><option value="Emergency Plumbing">Emergency Plumbing</option></select></label>
+                <label class="wide"><i data-lucide="wrench"></i><select name="service" required><option value="" disabled selected>Service Needed</option><option value="Plumbing Repair">Plumbing Repair</option><option value="Sewer & Drain">Sewer &amp; Drain</option><option value="Water Heater">Water Heater</option><option value="Emergency Plumbing">Emergency Plumbing</option></select></label>
                 <label class="wide"><i data-lucide="message-circle"></i><textarea name="message" placeholder="How can we help?"></textarea></label>
               </div>
 
@@ -344,21 +344,21 @@
 
           <div class="locations-grid">
             <div class="location-list" aria-label="Service locations">
-              <button class="location-button is-active" type="button" data-location-button data-location="boulder">
+              <button class="location-button is-active" type="button" data-location-button data-location="mesa-main">
                 <i data-lucide="map-pin"></i>
-                <span><strong>Boulder</strong><small>Primary service hub</small></span>
+                <span><strong>Mesa Plumbing</strong><small>Main Boulder listing</small></span>
               </button>
-              <button class="location-button" type="button" data-location-button data-location="longmont">
+              <button class="location-button" type="button" data-location-button data-location="mesa-drain-one">
                 <i data-lucide="map-pin"></i>
-                <span><strong>Longmont</strong><small>Plumbing &amp; sewer help</small></span>
+                <span><strong>Mesa Drain Cleaning</strong><small>Sewer repair listing</small></span>
               </button>
-              <button class="location-button" type="button" data-location-button data-location="lafayette">
+              <button class="location-button" type="button" data-location-button data-location="mesa-drain-two">
                 <i data-lucide="map-pin"></i>
-                <span><strong>Lafayette</strong><small>Drain &amp; repair service</small></span>
+                <span><strong>Mesa Sewer Repair</strong><small>Drain cleaning listing</small></span>
               </button>
-              <button class="location-button" type="button" data-location-button data-location="louisville">
+              <button class="location-button" type="button" data-location-button data-location="mcadams">
                 <i data-lucide="map-pin"></i>
-                <span><strong>Louisville</strong><small>Emergency plumbing</small></span>
+                <span><strong>McAdams Plumbing</strong><small>Nearby listing</small></span>
               </button>
             </div>
 
@@ -368,11 +368,12 @@
 
             <aside class="location-details" aria-live="polite">
               <span class="location-details-label">Selected Location</span>
-              <h3 data-location-title>Boulder</h3>
-              <p data-location-copy>Mesa provides plumbing and sewer service throughout Boulder, including clogged drains, sewer backups, leaks, water heaters, and emergency plumbing repairs.</p>
+              <h3 data-location-title>Mesa Plumbing</h3>
+              <p data-location-copy>Main Mesa listing for Boulder plumbing and sewer service, including clogged drains, sewer backups, leaks, water heaters, and emergency plumbing repairs.</p>
               <div class="location-detail-list">
                 <span><i data-lucide="clock-3"></i><strong data-location-response>Same-day appointments available</strong></span>
                 <span><i data-lucide="wrench"></i><strong data-location-services>Plumbing, sewer, drains, water heaters</strong></span>
+                <span><i data-lucide="external-link"></i><strong><a data-location-link href="https://www.google.com/search?q=Mesa+Plumbing,+Heating+and+Cooling&stick=H4sIAAAAAAAA_-NgU1I1qLAwN0tKM0xONrRMNLQwM02xMqhItkxONTFJTgIKGhukGSQuYlXyTS1OVAjIKc1NysxL11HwSE0sATIUEvNSFJzz83OAbACPp1A4TgAAAA&hl=en&mat=CYEs_6XAdIs2ElcBa0lj_2hYosnL0kKF4aUrOm20SEOoZ3bRoD_fsaEW-FpXYQxSCMNUreyTY4LnwXaINVrLonftcb8tlUEJ25rz-Yrmpfy9DINMMN2ypvXlPOzbci196nk&authuser=0" target="_blank" rel="noreferrer">View Google Listing</a></strong></span>
                 <span><i data-lucide="phone"></i><strong><a href="tel:+17206802303">Call (720) 680-2303</a></strong></span>
               </div>
               <a class="button button-red" href="#request">Schedule Service <i data-lucide="arrow-right"></i></a>
@@ -411,16 +412,16 @@
           <a href="#about">About Us</a>
           <a href="#reviews">Reviews</a>
           <a href="#faq">FAQs</a>
-          <a href="#locations">Locations</a>
+          <a href="locations.html">Locations</a>
           <a href="#contact">Contact</a>
         </nav>
 
         <nav class="footer-column footer-services" aria-label="Footer services">
           <h2>Services</h2>
-          <a href="#plumbing"><i data-lucide="wrench"></i> Plumbing Services</a>
-          <a href="#sewer"><i data-lucide="waves"></i> Sewer &amp; Drain</a>
-          <a href="#water-heaters"><i data-lucide="droplets"></i> Water Heaters</a>
-          <a href="#request"><i data-lucide="siren"></i> Emergency Plumbing</a>
+          <a href="services.html#plumbing-repair"><i data-lucide="wrench"></i> Plumbing Services</a>
+          <a href="services.html#sewer-drain"><i data-lucide="waves"></i> Sewer &amp; Drain</a>
+          <a href="services.html#water-heater-service"><i data-lucide="droplets"></i> Water Heaters</a>
+          <a href="services.html#emergency-plumbing"><i data-lucide="siren"></i> Emergency Plumbing</a>
         </nav>
 
         <div class="footer-column footer-contact">

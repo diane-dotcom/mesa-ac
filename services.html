@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Plumbing &amp; Sewer Services Boulder | Mesa Plumbing &amp; Sewer</title>
+    <meta
+      name="description"
+      content="Explore Mesa Plumbing & Sewer services in Boulder, including plumbing repairs, sewer and drain cleaning, water heaters, and 24/7 emergency plumbing."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="services-page">
+    <header class="site-header" id="top">
+      <a class="brand" href="index.html#top" aria-label="Mesa home">
+        <img class="brand-logo" src="assets/mesa_logo_transparent.png" alt="Mesa Plumbing and Sewer Company Boulder" />
+      </a>
+
+      <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html#home">Home</a>
+        <a class="is-active" href="services.html">Services</a>
+        <a href="locations.html">Locations</a>
+        <a href="index.html#about">About Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="phone-link" href="tel:+17206802303" aria-label="Call Mesa at 720 680 2303">
+          <i data-lucide="phone-call"></i>
+          <span>Call<br /><strong>(720) 680-2303</strong></span>
+        </a>
+        <a class="button button-red header-schedule" href="#request">Schedule Now <i data-lucide="arrow-right"></i></a>
+      </div>
+    </header>
+
+    <main id="homepage-clone" aria-live="polite">
+      <span id="request"></span>
+      <span id="plumbing-repair"></span>
+      <span id="sewer-drain"></span>
+      <span id="water-heater-service"></span>
+      <span id="emergency-plumbing"></span>
+      <span id="contact"></span>
+      <span id="locations"></span>
+    </main>
+    <div id="homepage-footer-clone"></div>
+
+    <script>
+      fetch('index.html')
+        .then((response) => response.text())
+        .then((html) => {
+          const source = new DOMParser().parseFromString(html, 'text/html');
+          const main = source.querySelector('main');
+          const footer = source.querySelector('footer');
+          if (main) {
+            const clonedMain = main.cloneNode(true);
+            const hero = clonedMain.querySelector('.hero');
+            const heroForm = hero?.querySelector('.request-card');
+            const heroContent = hero?.querySelector('.hero-content');
+            const servicesSection = clonedMain.querySelector('#services');
+            const contactSection = clonedMain.querySelector('#contact');
+            const reviewsSection = clonedMain.querySelector('#reviews');
+            const reviewDivider = clonedMain.querySelector('.why-review-divider');
+            const contactDivider = clonedMain.querySelector('.contact-location-divider');
+            const locationsSection = clonedMain.querySelector('#locations');
+
+            hero?.classList.add('service-hero-reference');
+            heroForm?.remove();
+            reviewDivider?.remove();
+            reviewsSection?.remove();
+            contactSection?.remove();
+            contactDivider?.remove();
+            if (heroContent) {
+              heroContent.innerHTML = `
+                <p class="breadcrumb">Home / Services</p>
+                <p class="eyebrow">Your local plumbing &amp; sewer experts</p>
+                <h1>Plumbing &amp; Sewer <span>Services Done Right.</span></h1>
+                <p class="hero-copy">From urgent leaks and clogged drains to sewer backups and water heater issues, Mesa helps Boulder homeowners with honest pricing and dependable workmanship.</p>
+                <div class="hero-buttons">
+                  <a class="button button-red" href="tel:+17206802303"><i data-lucide="phone"></i> Call (720) 680-2303</a>
+                  <a class="button button-dark" href="#locations">View Service Area <i data-lucide="arrow-right"></i></a>
+                </div>
+              `;
+            }
+            if (servicesSection) {
+              servicesSection.className = 'section services service-section-reference';
+              servicesSection.innerHTML = `
+                <div class="services-page-shell">
+                  <div class="section-heading">
+                    <p class="section-kicker">Our Services</p>
+                    <h2>Our Core Services</h2>
+                    <p>One trusted team for plumbing repairs, sewer and drain work, water heaters, and emergency service across Boulder County.</p>
+                  </div>
+                  <div class="service-page-grid">
+                    <article class="service-page-card" id="plumbing-repair">
+                      <div class="service-page-photo service-photo-plumbing"></div>
+                      <div class="service-page-body">
+                        <div class="service-page-title"><i data-lucide="wrench"></i><h3>Plumbing Repairs</h3></div>
+                        <p>Leaks, fixtures, pipe repairs, clogs, and whole-home plumbing help.</p>
+                        <ul><li>Leak detection and repair</li><li>Kitchen and bathroom plumbing</li><li>Fixture installs and replacements</li></ul>
+                        <a href="#request" data-service="Plumbing Repair">View Plumbing Services <i data-lucide="arrow-right"></i></a>
+                      </div>
+                    </article>
+                    <article class="service-page-card" id="sewer-drain">
+                      <div class="service-page-photo service-photo-sewer"></div>
+                      <div class="service-page-body">
+                        <div class="service-page-title"><i data-lucide="waves"></i><h3>Sewer &amp; Drain</h3></div>
+                        <p>Drain cleaning, sewer backups, line inspections, and repairs.</p>
+                        <ul><li>Drain cleaning and clog removal</li><li>Sewer camera inspection</li><li>Sewer backup help</li></ul>
+                        <a href="#request" data-service="Sewer & Drain">View Sewer Services <i data-lucide="arrow-right"></i></a>
+                      </div>
+                    </article>
+                    <article class="service-page-card" id="drain-cleaning">
+                      <div class="service-page-photo service-photo-drain"></div>
+                      <div class="service-page-body">
+                        <div class="service-page-title"><i data-lucide="circle-dot"></i><h3>Drain Cleaning</h3></div>
+                        <p>Fast help for slow drains, recurring clogs, kitchen backups, tubs, showers, and main lines.</p>
+                        <ul><li>Sink, tub, and shower drains</li><li>Main line cleaning</li><li>Recurring clog troubleshooting</li></ul>
+                        <a href="#request" data-service="Drain Cleaning">View Drain Services <i data-lucide="arrow-right"></i></a>
+                      </div>
+                    </article>
+                    <article class="service-page-card" id="water-heater-service">
+                      <div class="service-page-photo service-photo-water"></div>
+                      <div class="service-page-body">
+                        <div class="service-page-title"><i data-lucide="droplets"></i><h3>Water Heaters</h3></div>
+                        <p>Water heater repairs, replacements, and hot water troubleshooting.</p>
+                        <ul><li>Tank and tankless installs</li><li>No-hot-water diagnostics</li><li>Flush and maintenance service</li></ul>
+                        <a href="#request" data-service="Water Heater">View Water Heater Services <i data-lucide="arrow-right"></i></a>
+                      </div>
+                    </article>
+                    <article class="service-page-card" id="pipe-repair">
+                      <div class="service-page-photo service-photo-pipe"></div>
+                      <div class="service-page-body">
+                        <div class="service-page-title"><i data-lucide="route"></i><h3>Pipe Repair</h3></div>
+                        <p>Help for old pipes, burst lines, corrosion, leaks behind walls, and fixture supply issues.</p>
+                        <ul><li>Burst pipe repair</li><li>Water line repairs</li><li>Leak isolation and fixes</li></ul>
+                        <a href="#request" data-service="Pipe Repair">View Pipe Repair <i data-lucide="arrow-right"></i></a>
+                      </div>
+                    </article>
+                    <article class="service-page-card" id="emergency-plumbing">
+                      <div class="service-page-photo service-photo-emergency"></div>
+                      <div class="service-page-body">
+                        <div class="service-page-title"><i data-lucide="siren"></i><h3>Emergency Plumbing</h3></div>
+                        <p>24/7 response for urgent leaks, backups, clogs, and pipe issues.</p>
+                        <ul><li>Burst pipes and leaks</li><li>Backups and urgent clogs</li><li>Fast scheduling when available</li></ul>
+                        <a href="tel:+17206802303">Get Emergency Help <i data-lucide="arrow-right"></i></a>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              `;
+              const divider = servicesSection.nextElementSibling;
+              if (divider?.classList.contains('section-divider')) {
+                divider.className = 'service-core-divider';
+                divider.innerHTML = '<span></span><i data-lucide="wrench"></i><span></span>';
+              }
+            }
+            if (locationsSection) {
+              locationsSection.insertAdjacentHTML('beforebegin', '<span id="request" class="anchor-offset"></span><span id="contact" class="anchor-offset"></span>');
+              locationsSection.className = 'section locations-section service-location-section';
+              locationsSection.innerHTML = `
+                <div class="locations-shell">
+                  <div class="locations-heading">
+                    <p class="section-kicker">Locations</p>
+                    <h2>Boulder Plumbing &amp; Sewer Service Locations</h2>
+                    <p>Choose a nearby service location to view local response notes and the map for that area.</p>
+                  </div>
+
+                  <div class="locations-grid">
+                    <div class="location-list" aria-label="Service locations">
+                      <button class="location-button is-active" type="button" data-location-button data-location="boulder">
+                        <i data-lucide="map-pin"></i>
+                        <span><strong>Boulder</strong><small>Primary service location</small></span>
+                      </button>
+                      <button class="location-button" type="button" data-location-button data-location="longmont">
+                        <i data-lucide="map-pin"></i>
+                        <span><strong>Longmont</strong><small>North Boulder County</small></span>
+                      </button>
+                      <button class="location-button" type="button" data-location-button data-location="lafayette">
+                        <i data-lucide="map-pin"></i>
+                        <span><strong>Lafayette</strong><small>East Boulder County</small></span>
+                      </button>
+                      <button class="location-button" type="button" data-location-button data-location="louisville">
+                        <i data-lucide="map-pin"></i>
+                        <span><strong>Louisville</strong><small>Nearby service area</small></span>
+                      </button>
+                    </div>
+
+                    <div class="location-map" aria-label="Boulder service area map">
+                      <iframe data-location-map src="https://www.google.com/maps?q=Boulder%2C%20Colorado&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <aside class="location-details" aria-live="polite">
+                      <span class="location-details-label">Selected Location</span>
+                      <h3 data-location-title>Boulder</h3>
+                      <p data-location-copy>Primary Mesa service area for plumbing repairs, sewer service, drain cleaning, water heaters, and emergency plumbing help.</p>
+                      <div class="location-detail-list">
+                        <span><i data-lucide="clock-3"></i><strong data-location-response>Same-day appointments may be available</strong></span>
+                        <span><i data-lucide="wrench"></i><strong data-location-services>Plumbing, sewer, drains, water heaters</strong></span>
+                        <span><i data-lucide="external-link"></i><strong><a data-location-link href="https://www.google.com/maps?q=Boulder%2C%20Colorado" target="_blank" rel="noreferrer">Open Area Map</a></strong></span>
+                        <span><i data-lucide="phone"></i><strong><a href="tel:+17206802303">Call (720) 680-2303</a></strong></span>
+                      </div>
+                      <a class="button button-red" href="tel:+17206802303">Schedule Service <i data-lucide="arrow-right"></i></a>
+                    </aside>
+                  </div>
+                </div>
+              `;
+            }
+            document.querySelector('#homepage-clone').replaceWith(clonedMain);
+          }
+          if (footer) document.querySelector('#homepage-footer-clone').replaceWith(footer.cloneNode(true));
+          if (window.lucide) window.lucide.createIcons({ attrs: { 'aria-hidden': 'true' } });
+          document.dispatchEvent(new Event('mesa:content-loaded'));
+          const hashMap = {
+            '#plumbing-repair': '#plumbing',
+            '#sewer-drain': '#sewer',
+            '#water-heater-service': '#water-heaters',
+            '#emergency-plumbing': '#request',
+          };
+          const target = document.querySelector(hashMap[window.location.hash] || window.location.hash);
+          target?.scrollIntoView();
+        });
+    </script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

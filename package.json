@@ -5,6 +5,6 @@
   "scripts": {
     "dev": "python3 -m http.server 3000",
     "start": "python3 -m http.server 3000",
-    "build": "node -e \"require('fs').accessSync('index.html'); require('fs').accessSync('styles.css'); require('fs').accessSync('script.js'); console.log('Static site files verified.')\""
+    "build": "node -e \"require('fs').accessSync('index.html'); require('fs').accessSync('services.html'); require('fs').accessSync('locations.html'); require('fs').accessSync('styles.css'); require('fs').accessSync('script.js'); console.log('Static site files verified.')\""
   }
 }
