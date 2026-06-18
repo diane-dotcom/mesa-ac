@@ -491,7 +491,7 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
   align-items: center;
   display: grid;
   gap: clamp(28px, 4vw, 52px);
-  grid-template-columns: minmax(0, .95fr) minmax(340px, 500px);
+  grid-template-columns: minmax(0, .95fr) minmax(320px, 450px);
   margin: 0 auto;
   max-width: none;
 }
@@ -508,32 +508,32 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
 .contact-form-card {
   background: #fff;
   border: 1px solid #e6e8eb;
-  border-radius: 20px;
+  border-radius: 18px;
   box-shadow: 0 18px 42px rgba(6,11,16,.12);
-  padding: clamp(24px, 2.8vw, 34px);
+  padding: clamp(20px, 2.25vw, 28px);
   text-align: center;
 }
-.contact-form-icon { align-items: center; background: var(--ink); border-radius: 50%; color: #fff; display: inline-flex; height: 46px; justify-content: center; margin-bottom: 14px; width: 46px; }
-.contact-form-icon svg { color: #fff; height: 22px; width: 22px; }
-.contact-form-card h2 { color: var(--ink); font-size: clamp(24px, 2.3vw, 30px); letter-spacing: -.04em; margin: 0 0 8px; }
-.contact-form-card > p { color: #5f6873; margin: 0 0 20px; }
-.contact-form-grid { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+.contact-form-icon { align-items: center; background: var(--ink); border-radius: 50%; color: #fff; display: inline-flex; height: 40px; justify-content: center; margin-bottom: 11px; width: 40px; }
+.contact-form-icon svg { color: #fff; height: 19px; width: 19px; }
+.contact-form-card h2 { color: var(--ink); font-size: clamp(21px, 2vw, 26px); letter-spacing: -.04em; margin: 0 0 6px; }
+.contact-form-card > p { color: #5f6873; font-size: 14px; margin: 0 0 16px; }
+.contact-form-grid { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; }
 .contact-form-grid label {
   align-items: center;
   background: #fff;
   border: 1px solid #dfe3e8;
   border-radius: 8px;
   display: grid;
-  gap: 10px;
-  grid-template-columns: 22px 1fr;
+  gap: 8px;
+  grid-template-columns: 19px 1fr;
   letter-spacing: 0;
-  min-height: 56px;
-  padding: 0 14px;
+  min-height: 48px;
+  padding: 0 12px;
   text-transform: none;
 }
 .contact-form-grid label:focus-within { border-color: var(--red); box-shadow: 0 0 0 4px rgba(231,25,34,.1); }
 .contact-form-grid .wide { grid-column: 1 / -1; }
-.contact-form-grid svg { color: var(--ink); height: 19px; width: 19px; }
+.contact-form-grid svg { color: var(--ink); height: 16px; width: 16px; }
 .contact-form-grid input,
 .contact-form-grid select,
 .contact-form-grid textarea {
@@ -541,20 +541,20 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
   border: 0;
   border-radius: 0;
   color: var(--ink);
-  font-size: 17.1px;
+  font-size: 14.8px;
   font-weight: 500;
   margin: 0;
-  min-height: 54px;
+  min-height: 46px;
   padding: 0;
 }
 .contact-form-grid input:focus,
 .contact-form-grid select:focus,
 .contact-form-grid textarea:focus { box-shadow: none; }
-.contact-form-grid textarea { min-height: 82px; padding-top: 15px; }
-.contact-form-card .button { margin-top: 14px; }
-.contact-form-card small { align-items: center; color: #5f6873; display: inline-flex; gap: 8px; margin-top: 14px; }
-.contact-form-card small svg { color: var(--ink); height: 16px; width: 16px; }
-.contact-form-card .form-message { margin: 14px 0 0 !important; }
+.contact-form-grid textarea { min-height: 68px; padding-top: 12px; }
+.contact-form-card .button { font-size: 12.5px; margin-top: 11px; min-height: 47px; }
+.contact-form-card small { align-items: center; color: #5f6873; display: inline-flex; font-size: 11px; gap: 7px; margin-top: 11px; }
+.contact-form-card small svg { color: var(--ink); height: 14px; width: 14px; }
+.contact-form-card .form-message { font-size: 12px; margin: 11px 0 0 !important; }
 .contact-info-row { display: grid; gap: 15px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 26px auto 0; max-width: none; }
 .contact-info-row div { align-items: flex-start; background: #fff; border: 1px solid #e6e8eb; border-radius: 12px; box-shadow: 0 8px 20px rgba(6,11,16,.08); display: grid; gap: 5px 15px; grid-template-columns: 46px 1fr; min-height: 104px; padding: 18px; }
 .contact-info-row svg { background: rgba(231,25,34,.08); border-radius: 50%; color: var(--red); grid-row: span 3; height: 46px; padding: 12px; width: 46px; }
@@ -687,13 +687,13 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
 .service-page-card:hover { border-color: rgba(231,25,34,.28); box-shadow: 0 22px 46px rgba(6,11,16,.12); transform: translateY(-3px); }
 .service-page-photo { background: linear-gradient(135deg, #1a2028, #303844); height: 138px; position: relative; }
 .service-page-photo::after { background: linear-gradient(135deg, rgba(231,25,34,.72), rgba(6,11,16,.18)); content: ""; inset: 0; position: absolute; }
-.service-photo-plumbing { background-image: linear-gradient(135deg, rgba(6,11,16,.25), rgba(6,11,16,.1)), url("assets/homepage-pic.png"); background-position: center; background-size: cover; }
-.service-photo-sewer { background-image: linear-gradient(135deg, rgba(6,11,16,.28), rgba(6,11,16,.08)), url("assets/mesa-van-photo.png"); background-position: center; background-size: cover; }
-.service-photo-drain { background-image: linear-gradient(135deg, rgba(6,11,16,.28), rgba(6,11,16,.08)), url("assets/homepage-pic.png"); background-position: center; background-size: cover; }
-.service-photo-hvac { background-image: linear-gradient(135deg, rgba(6,11,16,.28), rgba(6,11,16,.08)), url("assets/mesa-van-photo.png"); background-position: center; background-size: cover; }
-.service-photo-water { background-image: linear-gradient(135deg, rgba(6,11,16,.28), rgba(6,11,16,.08)), url("assets/mesa-van-photo.png"); background-position: center; background-size: cover; }
-.service-photo-pipe { background-image: linear-gradient(135deg, rgba(6,11,16,.28), rgba(6,11,16,.08)), url("assets/homepage-pic.png"); background-position: center; background-size: cover; }
-.service-photo-emergency { background-image: linear-gradient(135deg, rgba(6,11,16,.28), rgba(6,11,16,.08)), url("assets/mesa-van-photo.png"); background-position: center; background-size: cover; }
+.service-photo-plumbing { background-image: linear-gradient(135deg, rgba(6,11,16,.12), rgba(6,11,16,.02)), url("/assets/service-1-plumbing-repairs.png"); background-position: center; background-size: cover; }
+.service-photo-sewer { background-image: linear-gradient(135deg, rgba(6,11,16,.18), rgba(6,11,16,.04)), url("/assets/service-2-sewer-drain.png"); background-position: center; background-size: cover; }
+.service-photo-drain { background-image: linear-gradient(135deg, rgba(6,11,16,.18), rgba(6,11,16,.04)), url("/assets/service-2-sewer-drain.png"); background-position: center; background-size: cover; }
+.service-photo-hvac { background-image: linear-gradient(135deg, rgba(6,11,16,.16), rgba(6,11,16,.04)), url("/assets/service-3-hvac.png"); background-position: center; background-size: cover; }
+.service-photo-water { background-image: linear-gradient(135deg, rgba(6,11,16,.12), rgba(6,11,16,.02)), url("/assets/service-4-water-heaters.png"); background-position: center; background-size: cover; }
+.service-photo-pipe { background-image: linear-gradient(135deg, rgba(6,11,16,.16), rgba(6,11,16,.04)), url("/assets/service-5-pipe-repair.png"); background-position: center; background-size: cover; }
+.service-photo-emergency { background-image: linear-gradient(135deg, rgba(6,11,16,.18), rgba(6,11,16,.04)), url("/assets/service-6-emergency-plumbing.png"); background-position: center; background-size: cover; }
 .service-page-body { display: flex; flex: 1; flex-direction: column; padding: 22px; }
 .service-page-body > svg { background: rgba(231,25,34,.1); border-radius: 10px; color: var(--red); height: 42px; padding: 10px; width: 42px; }
 .service-page-body h3 { font-size: 23px; letter-spacing: -.035em; margin: 16px 0 8px; }
@@ -896,7 +896,7 @@ body.services-page .service-hero-reference .eyebrow {
 }
 
 body.services-page .service-hero-reference h1 {
-  font-size: clamp(60px, 7vw, 99px);
+  font-size: clamp(55px, 6.45vw, 91px);
   line-height: .91;
   margin: 24px 0 24px;
   max-width: 790px;
@@ -908,7 +908,7 @@ body.services-page .service-hero-reference h1 span {
 }
 
 body.services-page .service-hero-reference .hero-copy {
-  font-size: clamp(19.5px, 1.67vw, 24px);
+  font-size: clamp(18.5px, 1.59vw, 22.8px);
   line-height: 1.62;
   max-width: 794px;
 }
@@ -1626,10 +1626,37 @@ body.services-page .service-help-grid {
 
 body.services-page .service-help-card,
 body.services-page .service-faq-card {
+  background: #fff;
   border-radius: 14px;
   box-shadow: 0 20px 54px rgba(8,14,22,.08);
   min-height: 310px;
   padding: 34px;
+}
+
+body.services-page .service-faq-card details {
+  background: #fff;
+}
+
+body.services-page .service-faq-card summary {
+  color: #090f1b;
+}
+
+body.services-page .service-faq-card details p {
+  color: #65717f;
+}
+
+body.services-page .faq-section,
+body.services-page .faq-intro h2,
+body.services-page .faq-intro > p:not(.section-kicker),
+body.services-page .faq-feature-grid strong,
+body.services-page .faq-accordion summary,
+body.services-page .faq-accordion details[open] summary,
+body.services-page .faq-accordion details p {
+  color: #fff;
+}
+
+body.services-page .faq-accordion details p {
+  color: rgba(255,255,255,.78);
 }
 
 body.services-page .service-final-cta {

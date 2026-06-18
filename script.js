@@ -119,11 +119,11 @@ const locationDetails = {
   },
   'mesa-drain-two': {
     title: 'Mesa Sewer Repair',
-    copy: '3050 Broadway Ste 311 Boulder, CO 80304. Mesa Sewer Repair supports sewer line concerns, slow drains, backups, and emergency plumbing support.',
+    copy: '3050 Broadway Ste 311 Boulder, CO. Mesa Sewer Repair supports sewer line concerns, slow drains, backups, and emergency plumbing support.',
     response: 'Sewer repair support available',
     services: 'Sewer backups, drains, water heaters',
-    map: 'https://www.google.com/maps?q=3050%20Broadway%20Ste%20311%20Boulder%2C%20CO%2080304&output=embed',
-    link: 'https://www.google.com/maps?q=3050%20Broadway%20Ste%20311%20Boulder%2C%20CO%2080304',
+    map: 'https://www.google.com/maps?q=3050%20Broadway%20Ste%20311%20Boulder%2C%20CO&output=embed',
+    link: 'https://www.google.com/maps?q=3050%20Broadway%20Ste%20311%20Boulder%2C%20CO',
   },
   mcadams: {
     title: 'McAdams Plumbing',
