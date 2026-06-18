@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "python3 -m http.server 3000",
-    "start": "python3 -m http.server 3000",
-    "build": "node -e \"require('fs').accessSync('index.html'); require('fs').accessSync('services.html'); require('fs').accessSync('locations.html'); require('fs').accessSync('styles.css'); require('fs').accessSync('script.js'); console.log('Static site files verified.')\""
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^15.5.19",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
   }
 }
