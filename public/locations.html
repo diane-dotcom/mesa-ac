@@ -29,9 +29,9 @@
       <nav class="main-nav" aria-label="Primary navigation">
         <a href="/">Home</a>
         <div class="nav-dropdown">
-          <a href="services.html">Services</a>
+          <button class="nav-trigger" type="button">Services</button>
           <div class="nav-menu" aria-label="Services menu">
-            <a href="services.html#plumbing-repair">Plumbing</a>
+            <a href="services.html">Plumbing Service</a>
             <a href="services.html#drain-cleaning">Drain Cleaning</a>
             <a href="services.html#sewer-line-repair">Sewer Line Repair</a>
             <a href="services.html#water-heater-service">Water Heaters</a>
@@ -39,17 +39,7 @@
             <a href="services.html#furnace-repair">Furnace Repair</a>
           </div>
         </div>
-        <div class="nav-dropdown">
-          <a href="locations.html">Locations</a>
-          <div class="nav-menu" aria-label="Locations menu">
-            <a href="locations.html">Boulder</a>
-            <a href="locations.html">Longmont</a>
-            <a href="locations.html">Broomfield</a>
-            <a href="locations.html">Thornton</a>
-            <a href="locations.html">Arvada</a>
-            <a href="locations.html">Lafayette</a>
-          </div>
-        </div>
+        <a href="locations.html">Locations</a>
       </nav>
 
       <div class="header-actions">
@@ -95,8 +85,7 @@
             const contactDivider = clonedMain.querySelector('.contact-location-divider');
             const locationsSection = clonedMain.querySelector('#locations');
 
-            hero?.classList.add('service-hero-reference', 'locations-hero-reference');
-            heroForm?.remove();
+            hero?.remove();
             topReviewStrip?.remove();
             servicesSection?.remove();
             whySection?.remove();
@@ -106,51 +95,6 @@
             reviewsSection?.remove();
             contactSection?.remove();
             contactDivider?.remove();
-            if (heroContent) {
-              heroContent.innerHTML = `
-                <p class="breadcrumb">Home / Locations</p>
-                <p class="eyebrow"><i data-lucide="map-pin"></i> Our service areas</p>
-                <h1>Local Service Across <span>Colorado</span> &amp; Nearby Communities</h1>
-                <p class="hero-copy">Mesa provides trusted plumbing, heating, cooling, and sewer service across Boulder County and nearby communities. Local experts, fast response, always here when you need us.</p>
-                <div class="location-hero-chips" aria-label="Featured service locations">
-                  <button class="is-active" type="button" data-location="boulder"><i data-lucide="map-pin"></i> Boulder</button>
-                  <button type="button" data-location="longmont"><i data-lucide="map-pin"></i> Longmont</button>
-                  <button type="button" data-location="broomfield"><i data-lucide="map-pin"></i> Broomfield</button>
-                  <button type="button" data-location="thornton"><i data-lucide="map-pin"></i> Thornton</button>
-                  <button type="button" data-location="commerce-city"><i data-lucide="map-pin"></i> Commerce City</button>
-                  <button type="button" data-location="lakewood"><i data-lucide="map-pin"></i> Lakewood</button>
-                  <button type="button" data-location="arvada"><i data-lucide="map-pin"></i> Arvada</button>
-                  <button type="button" data-location="lafayette"><i data-lucide="map-pin"></i> Lafayette</button>
-                </div>
-                <div class="location-hero-trust">
-                  <span class="location-hero-google"><img class="google-logo" src="assets/google-g-logo.svg" alt="" /><strong>4.8</strong> Google rating</span>
-                  <span><strong>20+</strong> communities served</span>
-                  <span><strong>Local</strong> trusted team</span>
-                </div>
-              `;
-            }
-            hero?.insertAdjacentHTML('beforeend', `
-              <aside class="location-hero-map-card" aria-label="Mesa service-area map preview">
-                <div class="location-hero-map location-hero-map-embed">
-                  <iframe data-hero-location-map src="https://www.google.com/maps?q=Boulder%2C%20Colorado&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Boulder service area map"></iframe>
-                </div>
-                <div class="location-hero-selected">
-                  <span><i data-lucide="map-pin"></i></span>
-                  <div>
-                    <div class="location-hero-popup-title">
-                      <h2 data-hero-location-title>Boulder, CO</h2>
-                      <strong>Primary Area</strong>
-                    </div>
-                    <p data-hero-location-copy>Mesa provides trusted plumbing, heating, cooling, sewer, and drain service in Boulder. Local experts. Fast response. Here when you need us.</p>
-                    <div class="location-hero-popup-stats">
-                      <span><i data-lucide="clock-3"></i><strong data-hero-location-response>24/7 Emergency Service</strong></span>
-                      <span><i data-lucide="shield-check"></i><strong data-hero-location-services>Licensed &amp; Insured</strong></span>
-                      <span><i data-lucide="badge-dollar-sign"></i><strong>Upfront pricing</strong></span>
-                    </div>
-                  </div>
-                </div>
-              </aside>
-            `);
             if (servicesSection) {
               servicesSection.className = 'section services service-section-reference';
               servicesSection.innerHTML = `
@@ -226,7 +170,7 @@
             }
             if (locationsSection) {
               locationsSection.insertAdjacentHTML('beforebegin', '<span id="request" class="anchor-offset"></span><span id="contact" class="anchor-offset"></span>');
-              locationsSection.className = 'section locations-section service-location-section';
+              locationsSection.className = 'section locations-section service-location-section locations-page-hero';
               locationsSection.innerHTML = `
                 <div class="locations-shell">
                   <div class="locations-heading">
@@ -254,6 +198,17 @@
                       </div>
                       <a class="button button-red" href="tel:+17206802303">Schedule Service <i data-lucide="arrow-right"></i></a>
                     </aside>
+                  </div>
+                  <div class="locations-area-buttons" aria-label="Additional service areas">
+                    <span>Also serving</span>
+                    <button type="button">Boulder</button>
+                    <button type="button">Longmont</button>
+                    <button type="button">Broomfield</button>
+                    <button type="button">Thornton</button>
+                    <button type="button">Commerce City</button>
+                    <button type="button">Lakewood</button>
+                    <button type="button">Arvada</button>
+                    <button type="button">Lafayette</button>
                   </div>
                 </div>
               `;

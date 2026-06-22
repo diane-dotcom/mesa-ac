@@ -28,6 +28,23 @@ document.querySelectorAll('.main-nav a').forEach((link) => {
   });
 });
 
+document.querySelectorAll('.nav-trigger').forEach((trigger) => {
+  trigger.addEventListener('click', (event) => {
+    event.preventDefault();
+    const dropdown = trigger.closest('.nav-dropdown');
+    if (!dropdown) return;
+
+    const isOpen = dropdown.classList.contains('is-open');
+    document.querySelectorAll('.nav-dropdown.is-open').forEach((item) => item.classList.remove('is-open'));
+    dropdown.classList.toggle('is-open', !isOpen);
+  });
+});
+
+document.addEventListener('click', (event) => {
+  if (event.target.closest('.nav-dropdown')) return;
+  document.querySelectorAll('.nav-dropdown.is-open').forEach((item) => item.classList.remove('is-open'));
+});
+
 const locationDetails = {
   boulder: {
     title: 'Boulder',
