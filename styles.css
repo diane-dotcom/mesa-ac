@@ -949,8 +949,8 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
   .trust-pills, .form-grid, fieldset, .service-grid, .value-grid, .contact-form-grid { grid-template-columns: 1fr; }
   .services { padding-left: 20px; padding-right: 20px; }
   .services .section-heading { margin-bottom: 24px; }
-  .service-grid { gap: 14px; max-width: 430px; width: 100%; }
-  .service-card { border-radius: 12px; padding: 24px 18px; }
+  .service-grid { display: flex; flex-direction: column; gap: 14px; max-width: 430px; width: 100%; }
+  .service-card { border-radius: 12px; display: block; padding: 24px 18px; width: 100%; }
   .service-card h3 { font-size: 19px; margin: 14px 0 6px; }
   .service-card p { font-size: 14px; line-height: 1.5; margin: 0; }
   .service-card a { justify-content: center; margin-top: 12px; width: 100%; }
@@ -2674,14 +2674,22 @@ body.services-page .service-final-cta h2 {
   }
 
   body.services-page .service-section-reference .service-page-grid {
+    display: flex;
+    flex-direction: column;
     gap: 18px;
     margin-left: auto;
     margin-right: auto;
     max-width: 430px;
+    width: 100%;
+  }
+
+  body.services-page .service-section-reference .service-page-card {
+    display: block;
+    width: 100%;
   }
 
   body.services-page .service-section-reference .service-page-photo {
-    height: 132px;
+    display: none;
   }
 
   body.services-page .service-section-reference .service-page-body {
