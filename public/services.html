@@ -28,6 +28,7 @@
 
       <nav class="main-nav" aria-label="Primary navigation">
         <a href="/">Home</a>
+        <a href="about.html">About Us</a>
         <div class="nav-dropdown">
           <button class="nav-trigger" type="button">Services</button>
           <div class="nav-menu" aria-label="Services menu">
@@ -265,6 +266,7 @@
           if (main) {
             const clonedMain = main.cloneNode(true);
             const hero = clonedMain.querySelector('.hero');
+            const heroImage = hero?.querySelector('.hero-bg-photo');
             const heroForm = hero?.querySelector('.request-card');
             const heroServiceButtons = hero?.querySelector('.hero-service-highlights');
             const heroContent = hero?.querySelector('.hero-content');
@@ -289,6 +291,7 @@
             }
 
             hero?.classList.add('service-hero-reference');
+            if (heroImage) heroImage.src = 'assets/mesa-hero-van.png';
             heroForm?.remove();
             heroServiceButtons?.remove();
             reviewDivider?.remove();
