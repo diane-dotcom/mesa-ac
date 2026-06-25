@@ -7,6 +7,8 @@ const nextConfig = {
         { source: '/services', destination: '/services.html' },
         { source: '/about', destination: '/about.html' },
         { source: '/locations', destination: '/locations.html' },
+        { source: '/privacy-policy', destination: '/privacy-policy.html' },
+        { source: '/terms-of-service', destination: '/terms-of-service.html' },
         { source: '/boulder', destination: '/boulder.html' },
         { source: '/longmont', destination: '/longmont.html' },
         { source: '/broomfield', destination: '/broomfield.html' },

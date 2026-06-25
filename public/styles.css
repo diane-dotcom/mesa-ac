@@ -416,6 +416,7 @@ svg { display: inline-block; height: 1em; width: 1em; fill: none; stroke: curren
 }
 .google-dot { align-items: center; display: inline-flex; }
 .google-logo { display: block; height: 22px; width: 22px; }
+.review-score { font-size: 18px; line-height: 1; }
 .stars { color: var(--gold); display: inline-flex; gap: 3px; vertical-align: middle; }
 .stars svg { fill: currentColor; height: 17px; stroke-width: 2.5; width: 17px; }
 
@@ -1096,6 +1097,107 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
 .service-page-body li::before { color: var(--red); content: "✓"; font-weight: 900; margin-right: 8px; }
 .service-page-body a { align-items: center; color: var(--red); display: inline-flex; font-size: 12px; font-weight: 900; gap: 7px; margin-top: auto; text-transform: uppercase; }
 
+.legal-page main {
+  background: linear-gradient(180deg, #f7f8fa 0%, #fff 42%);
+}
+
+.legal-hero {
+  background: #080e15;
+  color: #fff;
+  overflow: hidden;
+  padding: clamp(74px, 8vw, 118px) clamp(18px, 5vw, 72px) clamp(52px, 6vw, 82px);
+  position: relative;
+  text-align: center;
+}
+
+.legal-hero::before {
+  background:
+    radial-gradient(circle at 18% 20%, rgba(237,16,27,.26), transparent 24%),
+    linear-gradient(135deg, rgba(255,255,255,.08), transparent 38%);
+  content: "";
+  inset: 0;
+  opacity: .85;
+  position: absolute;
+}
+
+.legal-hero > * {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 880px;
+  position: relative;
+  z-index: 1;
+}
+
+.legal-hero h1 {
+  font-size: clamp(42px, 6vw, 78px);
+  letter-spacing: -.075em;
+  line-height: .98;
+  margin: 16px auto 18px;
+}
+
+.legal-hero p:not(.breadcrumb) {
+  color: rgba(255,255,255,.82);
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.65;
+}
+
+.legal-content {
+  padding: clamp(52px, 6vw, 84px) clamp(18px, 5vw, 72px);
+}
+
+.legal-card {
+  background: #fff;
+  border: 1px solid #e6eaf0;
+  border-radius: 18px;
+  box-shadow: 0 20px 56px rgba(6,11,16,.08);
+  color: #27313c;
+  display: grid;
+  gap: 30px;
+  margin: 0 auto;
+  max-width: 980px;
+  padding: clamp(28px, 5vw, 58px);
+}
+
+.legal-card section {
+  border-bottom: 1px solid #edf0f3;
+  padding-bottom: 28px;
+}
+
+.legal-card section:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.legal-card h2 {
+  color: #07111d;
+  font-size: clamp(24px, 2.4vw, 34px);
+  letter-spacing: -.055em;
+  line-height: 1.08;
+  margin: 0 0 12px;
+}
+
+.legal-card p,
+.legal-card li {
+  color: #4d5865;
+  line-height: 1.7;
+}
+
+.legal-card p {
+  margin: 0 0 14px;
+}
+
+.legal-card ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.legal-card a {
+  color: var(--red);
+  font-weight: 900;
+}
+
 .service-why-band { background: linear-gradient(135deg, #070d13, #131b23); color: #fff; padding: clamp(58px, 6.5vw, 84px) clamp(18px, 5vw, 72px); }
 .service-why-shell { align-items: center; display: grid; gap: clamp(28px, 4vw, 54px); grid-template-columns: minmax(0, 560px) minmax(320px, 520px); justify-content: center; margin: 0 auto; max-width: 1120px; }
 .service-why-copy { max-width: 560px; }
@@ -1279,7 +1381,12 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
   .brand-icons { display: none; }
   .site-header { min-height: 72px; padding: 12px 18px; }
   .brand-logo { max-height: 48px; padding: 3px 6px; }
-  .hero-review-strip { align-items: center; flex-wrap: wrap; justify-content: center; padding-left: 14px; padding-right: 14px; }
+  .hero-review-strip { align-items: center; flex-wrap: nowrap; gap: 9px; justify-content: center; padding-left: 10px; padding-right: 10px; }
+  .hero-review-strip .google-logo { height: 20px; width: 20px; }
+  .hero-review-strip .review-score { font-size: 16px; }
+  .hero-review-strip .stars { gap: 1px; }
+  .hero-review-strip .stars svg { height: 14px; width: 14px; }
+  .hero-review-strip span:last-child { font-size: 12px; white-space: nowrap; }
   .hero { min-height: 0; padding: 36px 0 56px; }
   .hero-inner { padding-left: 24px; padding-right: 24px; }
   .hero-content { text-align: center; }
