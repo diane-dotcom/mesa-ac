@@ -44,13 +44,13 @@
           <a class="nav-trigger" href="locations.html">Locations</a>
           <div class="nav-menu" aria-label="Locations menu">
             <a href="boulder.html">Boulder</a>
-            <a href="locations.html">Longmont</a>
-            <a href="locations.html">Broomfield</a>
-            <a href="locations.html">Thornton</a>
-            <a href="locations.html">Commerce City</a>
-            <a href="locations.html">Lakewood</a>
-            <a href="locations.html">Arvada</a>
-            <a href="locations.html">Lafayette</a>
+            <a href="longmont.html">Longmont</a>
+            <a href="broomfield.html">Broomfield</a>
+            <a href="thornton.html">Thornton</a>
+            <a href="commerce-city.html">Commerce City</a>
+            <a href="lakewood.html">Lakewood</a>
+            <a href="arvada.html">Arvada</a>
+            <a href="lafayette.html">Lafayette</a>
           </div>
         </div>
       </nav>
@@ -90,7 +90,7 @@
         },
         {
           id: 'drain-cleaning',
-          photo: 'service-photo-sewer',
+          photo: 'service-photo-drain',
           icon: 'waves',
           title: 'Drain Cleaning',
           copy: 'Clog removal, slow drains, backups, and camera-supported drain diagnostics.',
@@ -164,6 +164,17 @@
           sectionTitle: 'Explore More Mesa Services',
           sectionCopy: 'One trusted team for drain cleaning, sewer line repair, water heaters, AC repair, and furnace repair across Boulder County.',
           cards: relatedServiceCards('plumbing-repair'),
+          quality: {
+            label: 'Quality Plumbing',
+            title: 'Built for Long-Term Performance',
+            copy: [
+              'Plumbing problems are not just inconvenient. They can disrupt your day, damage your home, and create expensive surprises when they are not handled correctly. Mesa delivers expert plumbing solutions with precision, care, and integrity.',
+              'From stopping hidden leaks and updating fixtures to clearing drains and repairing water lines, our licensed plumbers inspect the system, explain the issue, and complete the work with clean workmanship and dependable materials.',
+            ],
+            features: ['Licensed & Insured', 'Expert Service', 'Clean Workmanship', 'Built for the Long Run'],
+            image: 'assets/service-plumbing-one.png',
+            alt: 'Mesa plumbing team training with pipe repair tools',
+          },
         },
         'drain-cleaning': {
           title: 'Drain Cleaning Boulder | Mesa Plumbing & Sewer',
@@ -174,8 +185,19 @@
           copy: 'Mesa clears clogged drains, slow sinks, backed-up tubs, and main line drain problems with honest diagnostics and dependable local service.',
           kicker: 'Drain Cleaning',
           sectionTitle: 'Explore More Mesa Services',
-          sectionCopy: 'One trusted local team for plumbing service, sewer line repair, water heaters, AC repair, and furnace repair across Boulder County.',
+          sectionCopy: 'One trusted local team for sewer line repair, water heaters, AC repair, furnace repair, and home service support across Boulder County.',
           cards: relatedServiceCards('drain-cleaning'),
+          quality: {
+            label: 'Quality Drain Cleaning',
+            title: 'Built for Clear, Reliable Flow',
+            copy: [
+              'Drain problems can slow down your whole home, create bad odors, and lead to backups when buildup is not removed correctly. Mesa handles drain cleaning with careful diagnostics, the right equipment, and clean work from start to finish.',
+              'From kitchen sinks and bathroom drains to main line blockages, our team clears the problem, checks for warning signs, and helps keep your drain system moving the way it should.',
+            ],
+            features: ['Licensed & Insured', 'Drain Diagnostics', 'Clean Workmanship', 'Built for Better Flow'],
+            image: 'assets/service-drain-cleaning-new.webp',
+            alt: 'Mesa drain cleaning equipment clearing a clogged drain',
+          },
         },
         'sewer-line-repair': {
           title: 'Sewer Line Repair Boulder | Mesa Plumbing & Sewer',
@@ -186,8 +208,19 @@
           copy: 'From sewer backups to damaged underground lines, Mesa helps Boulder homeowners understand the issue and choose the right repair path.',
           kicker: 'Sewer Line Repair',
           sectionTitle: 'Explore More Mesa Services',
-          sectionCopy: 'One trusted local team for plumbing service, drain cleaning, water heaters, AC repair, and furnace repair across Boulder County.',
+          sectionCopy: 'One trusted local team for drain cleaning, water heaters, AC repair, furnace repair, and home service support across Boulder County.',
           cards: relatedServiceCards('sewer-line-repair'),
+          quality: {
+            label: 'Quality Sewer Line Repair',
+            title: 'Built for Lasting Underground Performance',
+            copy: [
+              'Sewer line issues can create stressful backups, yard damage, and recurring drain problems if the real cause is missed. Mesa approaches sewer repair with careful inspection, clear recommendations, and durable repair planning.',
+              'From camera inspections and line diagnostics to repair and replacement support, our team helps identify the problem and complete the right sewer solution for your home.',
+            ],
+            features: ['Licensed & Insured', 'Camera Inspection', 'Clean Workmanship', 'Built to Last'],
+            image: 'assets/service-sewer-repair-new.png',
+            alt: 'Mesa sewer line repair work and underground pipe service',
+          },
         },
         'water-heaters': {
           title: 'Water Heater Service Boulder | Mesa Plumbing & Sewer',
@@ -198,8 +231,19 @@
           copy: 'Mesa helps with no-hot-water calls, leaking tanks, replacement planning, and routine water heater service for Boulder homes.',
           kicker: 'Water Heaters',
           sectionTitle: 'Explore More Mesa Services',
-          sectionCopy: 'One trusted local team for plumbing service, drain cleaning, sewer line repair, AC repair, and furnace repair across Boulder County.',
+          sectionCopy: 'One trusted local team for drain cleaning, sewer line repair, AC repair, furnace repair, and hot water support across Boulder County.',
           cards: relatedServiceCards('water-heater-service'),
+          quality: {
+            label: 'Quality Water Heater Service',
+            title: 'Built for Dependable Hot Water',
+            copy: [
+              'Water heater problems can interrupt showers, laundry, dishes, and daily routines. Mesa provides practical diagnostics, repair guidance, and replacement support for tank and tankless systems.',
+              'From no-hot-water calls and leaking tanks to maintenance and installation planning, our team helps restore reliable hot water with clean workmanship and clear communication.',
+            ],
+            features: ['Licensed & Insured', 'Hot Water Experts', 'Clean Workmanship', 'Built for Daily Use'],
+            image: 'assets/mesa-water-heater-new.png',
+            alt: 'Mesa water heater service and replacement work',
+          },
         },
         'ac-repair': {
           title: 'AC Repair Boulder | Mesa Plumbing Heating & Cooling',
@@ -210,8 +254,19 @@
           copy: 'When your home is not cooling the way it should, Mesa provides practical AC diagnostics, repair support, and tune-ups for Boulder homeowners.',
           kicker: 'AC Repair',
           sectionTitle: 'Explore More Mesa Services',
-          sectionCopy: 'One trusted local team for plumbing service, drain cleaning, sewer line repair, water heaters, and furnace repair across Boulder County.',
+          sectionCopy: 'One trusted local team for cooling repair, drain cleaning, sewer line repair, water heaters, and furnace repair across Boulder County.',
           cards: relatedServiceCards('ac-repair'),
+          quality: {
+            label: 'Quality AC Repair',
+            title: 'Built for Cooler, More Reliable Comfort',
+            copy: [
+              'AC problems can leave your home uncomfortable fast, especially when cooling equipment is strained during hot weather. Mesa provides straightforward diagnostics, practical repairs, and seasonal service for dependable comfort.',
+              'From weak airflow and warm air to noisy equipment and tune-ups, our technicians inspect the system, explain the issue, and complete the repair with clean, careful workmanship.',
+            ],
+            features: ['Licensed & Insured', 'Cooling Diagnostics', 'Clean Workmanship', 'Built for Comfort'],
+            image: 'assets/service-ac-addon.png',
+            alt: 'Mesa AC repair technician servicing cooling equipment',
+          },
         },
         'furnace-repair': {
           title: 'Furnace Repair Boulder | Mesa Plumbing Heating & Cooling',
@@ -222,8 +277,19 @@
           copy: 'Mesa helps Boulder homeowners with furnace diagnostics, heating repairs, seasonal service, and safety-focused comfort checks.',
           kicker: 'Furnace Repair',
           sectionTitle: 'Explore More Mesa Services',
-          sectionCopy: 'One trusted local team for plumbing service, drain cleaning, sewer line repair, water heaters, and AC repair across Boulder County.',
+          sectionCopy: 'One trusted local team for heating repair, drain cleaning, sewer line repair, water heaters, and AC repair across Boulder County.',
           cards: relatedServiceCards('furnace-repair'),
+          quality: {
+            label: 'Quality Furnace Repair',
+            title: 'Built for Safe, Steady Heat',
+            copy: [
+              'Furnace problems can affect comfort, safety, and energy use when heating equipment is not working correctly. Mesa provides careful diagnostics, repair support, and seasonal service for dependable heat.',
+              'From ignition issues and poor airflow to unusual noises and safety checks, our team identifies the cause, explains the repair, and helps keep your heating system ready for cold weather.',
+            ],
+            features: ['Licensed & Insured', 'Heating Diagnostics', 'Clean Workmanship', 'Built for Cold Weather'],
+            image: 'assets/service-furnace-new.png',
+            alt: 'Mesa furnace repair technician servicing heating equipment',
+          },
         },
       };
 
@@ -282,7 +348,7 @@
               const whyKicker = whySection.querySelector('.section-kicker');
               const whyHeading = whySection.querySelector('h2');
               const whyImage = whySection.querySelector('.why-photo-card img');
-              if (whyKicker) whyKicker.textContent = 'Locally Run, Not Private Equity';
+              whyKicker?.remove();
               if (whyHeading) whyHeading.textContent = 'Locally Run, Not Private Equity';
               if (whyImage) {
                 whyImage.src = 'assets/mesa-locally-new.png';
@@ -308,10 +374,30 @@
                   <a class="button button-red" href="tel:+17206802303"><i data-lucide="phone"></i> Call (720) 680-2303</a>
                   <a class="button button-dark" href="locations.html">View Service Area <i data-lucide="arrow-right"></i></a>
                 </div>
-                ${currentPage.highlights ? `<div class="service-hero-highlights" aria-label="Featured services">${currentPage.highlights.map(renderHighlight).join('')}</div>` : ''}
               `;
             }
             if (servicesSection) {
+              const quality = currentPage.quality;
+              servicesSection.insertAdjacentHTML('beforebegin', `
+                <section class="section service-quality-section" aria-labelledby="service-quality-title">
+                  <div class="service-quality-shell">
+                    <div class="service-quality-copy">
+                      <h2 id="service-quality-title"><span>${quality.label}</span> ${quality.title}</h2>
+                      ${quality.copy.map((paragraph) => `<p>${paragraph}</p>`).join('')}
+                      <div class="service-quality-rule" aria-hidden="true"></div>
+                      <div class="service-quality-features" aria-label="Mesa ${quality.label.toLowerCase()} standards">
+                        ${quality.features.map((feature, index) => {
+                          const icons = ['shield-check', 'settings', 'home', 'badge-check'];
+                          return `<div><i data-lucide="${icons[index]}"></i><strong>${feature}</strong></div>`;
+                        }).join('')}
+                      </div>
+                    </div>
+                    <div class="service-quality-photo">
+                      <img src="${escapeAttr(quality.image)}" alt="${escapeAttr(quality.alt)}" />
+                    </div>
+                  </div>
+                </section>
+              `);
               servicesSection.className = 'section services service-section-reference';
               servicesSection.innerHTML = `
                 <div class="services-page-shell">

@@ -8,6 +8,13 @@ const nextConfig = {
         { source: '/about', destination: '/about.html' },
         { source: '/locations', destination: '/locations.html' },
         { source: '/boulder', destination: '/boulder.html' },
+        { source: '/longmont', destination: '/longmont.html' },
+        { source: '/broomfield', destination: '/broomfield.html' },
+        { source: '/thornton', destination: '/thornton.html' },
+        { source: '/commerce-city', destination: '/commerce-city.html' },
+        { source: '/lakewood', destination: '/lakewood.html' },
+        { source: '/arvada', destination: '/arvada.html' },
+        { source: '/lafayette', destination: '/lafayette.html' },
       ],
     };
   },

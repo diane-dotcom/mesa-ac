@@ -16,6 +16,7 @@ menuButton?.addEventListener('click', () => {
 
 document.querySelectorAll('.main-nav a, .header-actions a').forEach((link) => {
   link.addEventListener('click', () => {
+    if (link.classList.contains('nav-trigger') && window.matchMedia('(max-width: 1120px)').matches) return;
     header.classList.remove('is-open');
     menuButton?.setAttribute('aria-expanded', 'false');
   });
@@ -30,7 +31,7 @@ document.querySelectorAll('.main-nav a').forEach((link) => {
 
 document.querySelectorAll('.nav-trigger').forEach((trigger) => {
   trigger.addEventListener('click', (event) => {
-    if (trigger.tagName === 'A') return;
+    if (trigger.tagName === 'A' && !window.matchMedia('(max-width: 1120px)').matches) return;
     event.preventDefault();
     const dropdown = trigger.closest('.nav-dropdown');
     if (!dropdown) return;
