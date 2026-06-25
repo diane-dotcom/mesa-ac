@@ -279,8 +279,13 @@
             if (whySection) {
               const whyKicker = whySection.querySelector('.section-kicker');
               const whyHeading = whySection.querySelector('h2');
+              const whyImage = whySection.querySelector('.why-photo-card img');
               if (whyKicker) whyKicker.textContent = 'Locally Run, Not Private Equity';
               if (whyHeading) whyHeading.textContent = 'Locally Run, Not Private Equity';
+              if (whyImage) {
+                whyImage.src = 'assets/mesa-locally-new.png';
+                whyImage.alt = 'Mesa local service team with vans in Boulder County';
+              }
             }
 
             hero?.classList.add('service-hero-reference');

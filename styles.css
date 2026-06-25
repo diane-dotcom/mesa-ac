@@ -797,8 +797,8 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
 .service-photo-plumbing { background-image: linear-gradient(135deg, rgba(6,11,16,.12), rgba(6,11,16,.02)), url("/assets/service-1-plumbing-repairs.png"); background-position: center; background-size: cover; }
 .service-photo-sewer { background-image: linear-gradient(135deg, rgba(6,11,16,.18), rgba(6,11,16,.04)), url("/assets/service-2-sewer-drain.png"); background-position: center; background-size: cover; }
 .service-photo-drain { background-image: linear-gradient(135deg, rgba(6,11,16,.18), rgba(6,11,16,.04)), url("/assets/service-2-sewer-drain.png"); background-position: center; background-size: cover; }
-.service-photo-hvac { background-image: linear-gradient(135deg, rgba(6,11,16,.16), rgba(6,11,16,.04)), url("/assets/mesa-ac-repair.png"); background-position: 58% 24%; background-size: cover; }
-.service-photo-water { background-image: linear-gradient(135deg, rgba(6,11,16,.12), rgba(6,11,16,.02)), url("/assets/mesa-water-heater.png"); background-position: center; background-size: cover; }
+.service-photo-hvac { background-image: linear-gradient(135deg, rgba(6,11,16,.16), rgba(6,11,16,.04)), url("/assets/mesa-ac-new.png"); background-position: 58% 24%; background-size: cover; }
+.service-photo-water { background-image: linear-gradient(135deg, rgba(6,11,16,.12), rgba(6,11,16,.02)), url("/assets/mesa-water-heater-new.png"); background-position: center; background-size: cover; }
 .service-photo-pipe { background-image: linear-gradient(135deg, rgba(6,11,16,.16), rgba(6,11,16,.04)), url("/assets/service-5-pipe-repair.png"); background-position: center; background-size: cover; }
 .service-photo-emergency { background-image: linear-gradient(135deg, rgba(6,11,16,.18), rgba(6,11,16,.04)), url("/assets/service-6-emergency-plumbing.png"); background-position: center; background-size: cover; }
 .service-page-body { display: flex; flex: 1; flex-direction: column; padding: 22px; }
@@ -1203,7 +1203,7 @@ body.services-page .service-location-section {
   align-items: center;
   background:
     linear-gradient(90deg, rgba(5,8,12,.92) 0%, rgba(5,8,12,.8) 42%, rgba(5,8,12,.52) 72%, rgba(5,8,12,.34) 100%),
-    url("assets/mesa-truck-3050.png") center center / cover no-repeat,
+    url("assets/mesa-hero-van.png") center center / cover no-repeat,
     linear-gradient(135deg, #151b22 0%, #080d13 58%, #121922 100%);
   color: #fff;
   display: grid;
@@ -2299,6 +2299,15 @@ body.services-page .service-final-cta h2 {
 /* Boulder location landing page built from the downloaded mockup details. */
 .boulder-page {
   background: #fff;
+}
+
+.boulder-page .hero-inner {
+  grid-template-columns: minmax(0, 840px);
+  justify-content: start;
+}
+
+.boulder-page .hero-content {
+  max-width: 840px;
 }
 
 .boulder-page .button-white {
