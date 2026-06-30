@@ -6,6 +6,8 @@ const nextConfig = {
         { source: '/', destination: '/index.html' },
         { source: '/services', destination: '/services.html' },
         { source: '/about', destination: '/about.html' },
+        { source: '/mcadams', destination: '/mcadams.html' },
+        { source: '/mcadams-plumbing', destination: '/mcadams.html' },
         { source: '/locations', destination: '/locations.html' },
         { source: '/privacy-policy', destination: '/privacy-policy.html' },
         { source: '/terms-of-service', destination: '/terms-of-service.html' },
