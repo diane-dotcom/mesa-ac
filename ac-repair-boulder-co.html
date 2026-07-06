@@ -508,10 +508,13 @@
     .mini-list span { color: rgba(255, 255, 255, .68); font-size: 13px; }
 
     .floating-call {
+      align-items: center;
       background: rgba(7, 22, 27, .96);
       border-top: 1px solid rgba(255, 255, 255, .12);
       bottom: 0;
       box-shadow: 0 -16px 44px rgba(0, 0, 0, .2);
+      display: flex;
+      justify-content: center;
       left: 0;
       padding: 12px 18px;
       position: fixed;
@@ -521,7 +524,7 @@
       z-index: 30;
     }
 
-    .floating-call a { margin: 0 auto; max-width: 460px; width: 100%; }
+    .floating-call a { display: flex; margin: 0; width: min(100%, 460px); }
 
     footer {
       background: #07161b;
